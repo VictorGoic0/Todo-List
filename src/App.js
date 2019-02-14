@@ -13,6 +13,11 @@ const list = [
     task: 'Bake Cookies',
     id: 1528817084358,
     completed: false
+  },
+  {
+    task: 'Create TodoList',
+    id: 1528817084395,
+    completed: false
   }
 ];
 
@@ -53,10 +58,25 @@ class App extends React.Component {
     })
   }
 
+  toggleItem = itemId => {
+    this.setState({
+      list: this.state.list.map(item => {
+        if (itemId === item.id) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        }
+        return item;
+      })
+    });
+  };
+
   render() {
     return (
       <div>
-        <TodoList list={this.state.list} />
+        <TodoList list={this.state.list}
+        toggleItem={this.toggleItem} />
         <TodoForm
         addTodo={this.addTodo}
         handleChanges={this.handleChanges}
