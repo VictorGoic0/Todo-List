@@ -1,10 +1,9 @@
 import React from 'react';
 
-
 const Todo = props => {
   return (
     <div onClick={() => props.toggleItem(props.id)}>
-      <p>{props.task}</p>
+      <li>{props.task}</li>
     </div>
   )
 }

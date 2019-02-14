@@ -2,6 +2,7 @@ import React from 'react';
 import Todo from './components/TodoComponents/Todo';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
+import './App.css'
 
 const list = [
   {
@@ -81,7 +82,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
+        <h1>ToDo List</h1>
         <TodoList list={this.state.list}
         toggleItem={this.toggleItem} />
         <TodoForm
