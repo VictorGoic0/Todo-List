@@ -59,9 +59,7 @@ class App extends React.Component {
         <TodoForm
         addTodo={this.addTodo}
         handleChanges={this.handleChanges}
-        task={this.state.task}
-        id={this.state.id}
-        completed={this.state.completed}
+        name={this.state.task}
         />
       </div>
     );
