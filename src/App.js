@@ -72,6 +72,13 @@ class App extends React.Component {
     });
   };
 
+  clearCompleted = e => {
+    e.preventDefault();
+    this.setState({
+      list: this.state.list.filter(input => !input.completed)
+    })
+  }
+
   render() {
     return (
       <div>
@@ -82,6 +89,7 @@ class App extends React.Component {
         handleChanges={this.handleChanges}
         name={this.state.task}
         />
+        <button onClick={this.clearCompleted}>Clear Completed</button>
       </div>
     );
   }

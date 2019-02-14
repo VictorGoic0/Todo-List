@@ -11,7 +11,6 @@ const TodoForm = props => {
       placeholder="...Todo"
       />
       <button type="submit">Add Todo</button>
-      <button>Clear Completed</button>
     </form>
   )
 }
