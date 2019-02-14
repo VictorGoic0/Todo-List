@@ -35,8 +35,8 @@ class App extends React.Component {
 
     const newTodo = {
       task: this.state.task,
-      id: this.state.id,
-      completed: this.state.completed
+      id: Date.now(),
+      completed: false
     };
     this.setState({
       list: [...this.state.list, newTodo],
@@ -47,6 +47,7 @@ class App extends React.Component {
   }
 
   handleChanges = e => {
+    console.log(this.state)
     this.setState({
       [e.target.name]: e.target.value
     })
