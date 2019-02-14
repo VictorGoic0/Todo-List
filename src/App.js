@@ -55,7 +55,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Todo task="Organize Garage"/>
         <TodoList list={this.state.list} />
         <TodoForm
         addTodo={this.addTodo}
